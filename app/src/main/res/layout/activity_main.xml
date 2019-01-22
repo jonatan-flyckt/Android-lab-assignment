@@ -4,34 +4,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:padding="25px"
-        android:background="#204be7"
-        android:text="ToDo App" />
-
     <Button
         android:id="@+id/button_select_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20px"
         android:layout_marginTop="15px"
-        android:text="SELECT ONE" />
+        android:text= "@string/select_one" />
 
     <Button
         android:id="@+id/button_create"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20px"
-        android:text="CREATE" />
+        android:text="@string/create"
+        android:onClick="createButtonClicked"/>
 
     <Button
         android:id="@+id/button_delete_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20px"
-        android:text="DELETE ONE" />
+        android:text="@string/delete_one" />
 </LinearLayout>

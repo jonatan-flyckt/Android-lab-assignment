@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ToDo App</string>
+    <string name="select_one">SELECT ONE</string>
+    <string name="create">CREATE</string>
+    <string name="delete_one">DELETE ONE</string>
+
 </resources>

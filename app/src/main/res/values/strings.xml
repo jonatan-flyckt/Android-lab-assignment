@@ -3,5 +3,6 @@
     <string name="select_one">SELECT ONE</string>
     <string name="create">CREATE</string>
     <string name="delete_one">DELETE ONE</string>
-
+    <string name="title">Title</string>
+    <string name="enter_text">Enter text here</string>
 </resources>

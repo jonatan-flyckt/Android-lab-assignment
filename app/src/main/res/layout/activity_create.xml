@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20px"
+        android:layout_marginTop="15px"
+        android:layout_weight="0"
+        android:text="@string/title" />
+
+    <EditText
+        android:id="@+id/enteredTitle"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_marginHorizontal="20px"
+        android:layout_weight="0"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_text" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20px"
+        android:layout_weight="0"
+        android:text="@string/create"
+        android:onClick="createButtonClicked" />
 
 </LinearLayout>

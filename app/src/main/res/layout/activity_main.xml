@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20px"
         android:layout_marginTop="15px"
-        android:text= "@string/select_one" />
+        android:text= "@string/select_one"
+        android:onClick="selectOneButtonClicked"/>
 
     <Button
         android:id="@+id/button_create"

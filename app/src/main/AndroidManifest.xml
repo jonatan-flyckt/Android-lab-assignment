@@ -20,5 +20,7 @@
         </activity>
         <activity android:name=".PickToDoActivity">
         </activity>
+        <activity android:name=".ViewToDoActivity">
+        </activity>
     </application>
 </manifest>

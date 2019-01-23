@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void selectOneButtonClicked(){
+    public void selectOneButtonClicked(View view){
         Intent intent = new Intent(this, PickToDoActivity.class);
         startActivity(intent);
     }

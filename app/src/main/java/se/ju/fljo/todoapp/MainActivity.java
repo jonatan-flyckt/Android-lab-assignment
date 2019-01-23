@@ -29,4 +29,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PickToDoActivity.class);
         startActivity(intent);
     }
+
+    public void deleteButtonClicked(View view){
+        Intent intent = new Intent(this, DeleteToDoActivity.class);
+        startActivity(intent);
+    }
 }

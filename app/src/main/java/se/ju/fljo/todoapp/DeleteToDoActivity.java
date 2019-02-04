@@ -11,25 +11,33 @@ import android.widget.ListView;
 
 public class DeleteToDoActivity extends AppCompatActivity {
 
+    static ListView mListView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deletetodoactivity);
-        ListView listView =(ListView) findViewById(R.id.deleteListView);
-        listView.setAdapter(new ArrayAdapter<Data.ToDo>(
+        mListView =(ListView) findViewById(R.id.deleteListView);
+        mListView.setAdapter(new ArrayAdapter<Data.ToDo>(
                 this,
                 android.R.layout.simple_list_item_1,
                 Data.toDos
         ));
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Data.ToDo clickedToDo = Data.toDos.get(i);
                 System.out.println(clickedToDo);
                 Intent intent = new Intent(DeleteToDoActivity.this, DeleteSingleToDoActivity.class);
                 intent.putExtra("title", clickedToDo.title);
+                intent.putExtra("index", i);
                 startActivity(intent);
             }
         });
+    }
+
+    public static void removeItem(int index){
+        Data.toDos.remove(index);
+        mListView.invalidateViews();
     }
 }

@@ -1,5 +1,6 @@
 package se.ju.fljo.todoapp;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +8,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import static se.ju.fljo.todoapp.Data.toDos;
@@ -30,11 +34,9 @@ public class DeleteSingleToDoActivity extends AppCompatActivity {
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int whichButton) {
-                        //radera
                         Intent intent = getIntent();
-                        String toDo = intent.getStringExtra("title");
-                        System.out.println(toDo);
-                        toDos.remove(toDo);
+                        final int toDoIndex = intent.getIntExtra("index", 0);
+                        DeleteToDoActivity.removeItem(toDoIndex);
                         finish();
                     }
                 }).setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
